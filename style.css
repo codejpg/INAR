@@ -1,0 +1,284 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #DEBFAC;
+    position: relative;
+    font-family: 'Kavivanar', cursive;
+}
+.bg{
+    background-image: url("img/INAR_SKY.png");
+    background-position: center;
+    background-size: cover;
+    width: calc(100vw - 0px );
+    min-height: 500vh;
+    position: absolute;
+}
+.frame{
+    height: 100vh;
+    width: 100vw;
+    border: #DEBFAC 25px solid;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: fixed;
+    margin: 0;
+    padding: 0; 
+    z-index: 100;
+}
+
+.frame-1{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 15px;
+    background-color: #DEBFAC;
+    z-index: 100;
+}
+.frame-2{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 100vh;
+    background-color: #DEBFAC;
+    z-index: 100;
+}
+.frame-3{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 15px;
+    background-color: #DEBFAC;
+    z-index: 100;
+}
+.frame-4{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 100vh;
+    background-color: #DEBFAC;
+    z-index: 100;
+}
+
+.bg-imprint{
+    background-image: url("img/INAR_SKY.png");
+    background-position: center;
+    background-size: cover;
+    width: calc(100vw - 20px);
+    min-height: 200vh;
+    position: absolute;
+}
+
+.hand{
+    position: absolute;
+    background-image: url("img/INAR_Hand_schwebend.png");
+    background-position: center;
+    background-size: cover;
+    left: 0px;
+    top: 100px;
+    z-index: 1000;
+}
+
+h1{
+    font-family: bookman-jf-pro, serif;
+    text-transform: uppercase;
+    font-size: 9.5vw;
+    margin: 0;
+    z-index: 1000;
+}
+
+#title{
+    position: fixed;
+    top: 0;
+}
+
+.content{
+    min-height: 200vh;
+}
+
+img.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.grid{
+    display: grid;
+    scroll-snap-align: center;
+    grid-template-columns: 1fr 1fr;
+    margin: 10vw;
+    min-height: 100vh;
+    gap: 10vw;
+    scroll-snap-align: end;
+}
+.grid2{
+    display: grid;
+    scroll-snap-align: center;
+    grid-template-columns: 1fr 2fr;
+    margin: 10vw;
+    min-height: 200vh;
+    gap: 10vw;
+    scroll-snap-align: top;
+}
+
+#text-box {
+    font-size: 2vw;
+}
+
+#text-box.sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    align-self: start;
+    top: 30vh;
+}
+
+#artist-box.sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    align-self: start;
+    top: 30vh;
+}
+#artist-box{
+    font-family: bookman-jf-pro, serif;
+    font-size: 2.5vw;
+    text-transform: uppercase;
+    line-height: 3vw;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+section {
+    align-items: flex-start;
+    text-align: left;
+    scroll-snap-type: y mandatory;
+}
+
+a:hover{
+    color: #942229;
+    cursor: crosshair;
+}
+
+.imprint{
+    padding: 0 10vw;
+    margin-top: 30vh;
+}
+#hand-mobile{
+    display: none;
+}
+#hand{
+    display: block;
+}
+.empty{
+    display: block;
+}
+.mobile-foot{
+    display: none;
+}
+
+.foot{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px 50px;
+    position: absolute;
+    bottom:0;
+    height: 100px;
+    width: calc(100vw - 110px);
+}
+.seh-logo{
+    width: 150px;
+}
+.film-logo{
+    width: 190px;
+}
+
+@media screen and (max-width: 968px) {
+    #title{
+        top: 2vh;
+    }
+    .grid, .grid2{
+        grid-template-columns: 1fr 4fr;
+        margin: 10vw;
+        min-height: 150vh;
+    }
+
+    #artist-box{
+        font-family: bookman-jf-pro, serif;
+        font-size: 5vw;
+        text-transform: uppercase;
+        line-height: 6vw;
+        margin-top: 50vh;
+    }
+    #text-box {
+        font-size: 3vw;
+    }
+    #hand{
+        display: none;
+    }
+    #hand-mobile{
+        display: block;
+        height: auto;
+        width: 90vw;
+    }
+  
+    #text-box.sticky{
+        align-self: start;
+        top: 70vh;
+    }
+    #artist-box.sticky{
+        align-self: start;
+        top: 30vh;
+    }
+    .bg{
+        min-height: 400vh;
+    }
+    .imprint{
+        padding: 0 10vw;
+        margin-top: 15vh;
+    }
+
+}
+@media screen and (max-width: 668px) {
+    .grid, .grid2{
+        grid-template-columns: 1fr;
+        margin: 10vw;
+        min-height: 150vh;
+    }
+    #text-box {
+        font-size: 5vw;
+    }
+    #text-box.sticky{
+        align-self: start;
+        top: 30vh;
+    }
+    #hand-mobile{
+        display: block;
+
+    }
+    section{
+        min-height: 200vh;
+    }
+    
+    .empty{
+        display:none;
+    }
+    .mobile-foot{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 10px 50px;
+        position: absolute;
+        bottom:0;
+        height: 50px;
+        width: calc(100vw - 120px);
+    }
+  
+    .foot{
+        display: none;
+    }
+}
